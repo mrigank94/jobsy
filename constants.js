@@ -1,5 +1,5 @@
 const USERTYPES = {
-  STUDENT: "STUDENT",
+  APPLICANT: "APPLICANT",
   ADMIN: "ADMIN",
   COMPANY: "COMPANY",
 };
@@ -7,4 +7,9 @@ const USERTYPES = {
 const USER_STATUS = {
   PENDING: "PENDING",
   APPROVED: "APPROVED",
+};
+
+module.exports = {
+  USERTYPES,
+  USER_STATUS,
 };

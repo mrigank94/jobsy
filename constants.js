@@ -1,0 +1,10 @@
+const USERTYPES = {
+  STUDENT: "STUDENT",
+  ADMIN: "ADMIN",
+  COMPANY: "COMPANY",
+};
+
+const USER_STATUS = {
+  PENDING: "PENDING",
+  APPROVED: "APPROVED",
+};

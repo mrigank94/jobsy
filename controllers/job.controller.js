@@ -9,7 +9,7 @@ async function getJobById(req, res) {
   const id = req.params.id;
 
   try {
-    const job = await Job.findById(id);
+    const job = await Job.findById(id).populate("company");
     res.status(200).send(job);
   } catch (ex) {
     res.status(404).send({

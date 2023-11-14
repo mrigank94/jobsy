@@ -34,7 +34,7 @@ async function deleteCompanyById(req, res) {
   await Company.findByIdAndDelete(id);
 
   res.status(200).send({
-    message: `Company with ID ${id} updated successfully`,
+    message: `Company with ID ${id} deleted successfully`,
   });
 }
 

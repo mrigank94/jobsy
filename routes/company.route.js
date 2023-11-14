@@ -4,9 +4,10 @@ const {
   updateCompanyById,
   deleteCompanyById,
 } = require("../controllers/company.controller");
+const { isAdmin } = require("../middlewares/authJwt");
 
 module.exports = function (app) {
-  app.post("/jobsy/api/v1/companies", createCompany);
+  app.post("/jobsy/api/v1/companies", [isAdmin], createCompany);
 
   app.get("/jobsy/api/v1/companies/:id", getCompanyById);
 

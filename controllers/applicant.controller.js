@@ -43,7 +43,9 @@ async function getApplicationById(req, res) {
   const id = req.params.id;
 
   try {
-    const application = await Applicant.findById(id);
+    const application = await Applicant.findById(id).populate("job");
+
+    console.log(application);
     res.status(200).send(application);
   } catch (ex) {
     res.status(404).send({
